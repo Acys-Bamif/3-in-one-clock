@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+<meta charset="UTF-8">
+<title>Acys-Bamif 3 in one clock</title>
+<link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+
+<div id="Time">
+<div id="button" >
+	<button id="but1" onclick="openClock1()">TIME & DATE</button><button id="but2" onclick="openClock2()">COUNTDOWN TIMER</button><button id="but3" onclick="openClock3()">STOP WATCH</button>
+</div>
+
+<div class="clock" id="clock1">
+	<div class="clock-main">
+		<div class="clock-face">
+			<div class="hand hour-hand"></div>
+			<div class="hand mins-hand"></div>
+			<div class="hand secs-hand"></div>
+			<div class="clock-center"></div>
+			<div class="clock-digit"></div>
+		</div>
+	</div>
+	
+	<div id="digital-clock" >
+		<h1>
+			<b id="dhour"></b>:<b id="dmin"></b><small id="amPm">AM</small>
+		</h1>
+		<b id="dday"></b>,
+		<b id="dmonth"></b> <b id="ddate"></b></small>
+	</div>
+</div>
+
+<div class="clock count-timer" id="clock2">
+	<div>
+		<p id="inputCD">Mins: <input id="inputMin" type="number" value="0">
+		Secs: <input id="inputSec" type="number" value="20"></p>
+		
+		<span id="countDown">
+			<b id="hMin">00</b><big>:</big><b id="hSec">00</b>
+		</span><br>
+		<span>
+			<button id="buttonCD" onclick="startCountDown()">START</button>
+			<button class="reset" onclick="resetCD()">RESET</button>
+		</span>
+	</div>
+</div>
+
+<div class="clock count-timer" id="clock3">
+	<div>
+		<span>
+			<b id="th">0</b>
+			<b id="tm">00</b>
+			<b id="ts">00</b>
+			<b><small id="tms">00</small></b>
+		</span><br>
+		<span>
+			<button id="buttonSW" onclick="startStopWatch()">START</button>
+			<button onclick="resetSW()">RESET</button>
+		</span>
+	</div>
+</div>
+
+  <script  src="script.js"></script>
+
+</body>
+</html>
